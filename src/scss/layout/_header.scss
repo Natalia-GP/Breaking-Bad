@@ -17,15 +17,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    &__div--input{
+    &--input{
         border: solid 2px $orange-bg;
         width: 60vw;
         height: 25px;
         padding-left: 10px;
         margin: 3rem;
     }
-    &__div--btn{
+    &--btn{
         background-color: $orange-bg;
         color: $back-color;
         text-transform: capitalize;
@@ -36,6 +35,7 @@
         height: 30px;
         width: 80px;
         cursor: pointer;
+    }
     }
 }
 
