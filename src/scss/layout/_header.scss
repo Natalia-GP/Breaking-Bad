@@ -8,10 +8,37 @@
     background-position: center;
     align-items: center;
     &__div{
-        background-color: bisque;
-        padding: 15px 15px 15px 15px;
+    background-color: white;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(30px);
+    box-shadow: 1px 1px 4px 0px #afa9a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    &__div--input{
+        border: solid 2px $orange-bg;
+        width: 60vw;
+        height: 25px;
+        padding-left: 10px;
+        margin: 3rem;
+    }
+    &__div--btn{
+        background-color: $orange-bg;
+        color: $back-color;
+        text-transform: capitalize;
+        border: none;
+        border-radius: 5%;
+        margin-right: 40px;
+        padding: 2px;
+        height: 30px;
+        width: 80px;
+        cursor: pointer;
     }
 }
+
 
 
 
