@@ -1,8 +1,39 @@
 /* @import 'core/variables';
-@import 'core/reset';
 @import 'components/code';
 @import 'components/links';
 @import 'layout/page';
-@import 'layout/header';
+
 @import 'layout/footer';
 @import 'pages/index'; */
+@import 'core/reset';
+@import 'layout/header';
+
+.main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.section__character{
+    text-align: center;
+    color: orange;
+    margin-bottom: 20px;
+}
+
+
+.section__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 70%;
+    list-style: none;
+    &__article{  
+        justify-content: center;
+        align-items:center;
+        align-content: center;
+        width:150px;    
+        &--img{
+            max-width:100px;
+        }
+    }
+
+}

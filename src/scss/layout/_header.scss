@@ -1,0 +1,17 @@
+.header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../images/cabecera2.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    &__div{
+        background-color: bisque;
+        padding: 15px 15px 15px 15px;
+    }
+}
+
+
+
