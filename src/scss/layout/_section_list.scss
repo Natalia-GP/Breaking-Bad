@@ -3,6 +3,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     margin: 5%;
+    
 }
 
 .section{
@@ -29,6 +30,7 @@
             align-items: center;
             align-content: center;
             border-style: inset;
+            border-color: chartreuse;
             height: 350px;
             font-family: $font-main;
             font-size: 15px; 
@@ -39,4 +41,7 @@
         }
     
     }
+}
+.favourite{
+    background-color: rgb(83, 161, 83);
 }
