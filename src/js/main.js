@@ -13,7 +13,7 @@ let favList = []; //array personajs favoritos
 //FUNCIONES
 
 //fetch del API carga de página
-fetch('https://breakingbadapi.com/api/characters')
+fetch('./assets/data/characters.json')
   .then((response) => response.json())
   .then((data) => {
     allCharacter = data;
@@ -34,7 +34,6 @@ function renderAllCharacters(dataChar, htmlList) {
     renderCharacters(character, htmlList);
   }
 }
-
 
 //función para pintar cada personaje con DOM avanzado
 function renderCharacters(characterData, htmlList) {
@@ -78,8 +77,9 @@ btn.addEventListener('click', handleClick);
 function handleFavourites(event) {
   event.preventDefault();
   const target = event.currentTarget;
-  if (searchArray(parseInt(target.id)) === -1) { //convierte
-    target.classList.add('favourite');//añado la clase favourite
+  if (searchArray(parseInt(target.id)) === -1) {
+    //convierte
+    target.classList.add('favourite'); //añado la clase favourite
     favList.push(
       allCharacter.find(
         (eachCharacter) => eachCharacter.char_id === parseInt(target.id)
@@ -100,8 +100,9 @@ function searchArray(target) {
 
 //EVENTO ESCUCHA CADA PJ y fv
 function addEvent() {
-  const characters = document.querySelectorAll('.section__list__article');//array con todos los elem
-  for (const eachCharacter of characters) {  //creamos el bucle
+  const characters = document.querySelectorAll('.section__list__article'); //array con todos los elem
+  for (const eachCharacter of characters) {
+    //creamos el bucle
     if (!eachCharacter.classList.contains('aside__favourite__li--article')) {
       eachCharacter.addEventListener('click', handleFavourites);
     }
