@@ -1,14 +1,14 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    font-size: 1rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4vh;
-    color: white;
-    background-color: $orange-bg;
-    font-family: $font-main;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  font-size: 0.7rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  color: white;
+  background-color: $orange-bg;
+  font-family: $font-main;
+}

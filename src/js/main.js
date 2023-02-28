@@ -1,5 +1,4 @@
 'use strict';
-console.log('añañañaña');
 //QUERYSELECTORS
 const btn = document.querySelector('.js-btn');
 const inputSearch = document.querySelector('.js-input');
@@ -7,8 +6,8 @@ const listCharacter = document.querySelector('.js-list');
 const favCharacter = document.querySelector('.js-favourite');
 //VARIABLES GLOBALES-> VARIABLES CON DATOS (PERSONAJES Y FAV)
 let allCharacter = []; //array todo los pj
-let searchList = [];
 let favList = []; //array personajs favoritos
+let filterCharacters = [];
 
 //FUNCIONES
 
@@ -25,8 +24,7 @@ fetch('./assets/data/characters.json')
       renderAllCharacters(favList, favCharacter); //pinta
     }
   });
-
-//bucle para pintar todos los pj
+//pintar array
 function renderAllCharacters(dataChar, htmlList) {
   htmlList.innerHTML = ''; //mi hoja en blanco
   for (const character of dataChar) {
@@ -34,7 +32,6 @@ function renderAllCharacters(dataChar, htmlList) {
     renderCharacters(character, htmlList);
   }
 }
-
 //función para pintar cada personaje con DOM avanzado
 function renderCharacters(characterData, htmlList) {
   const liElement = document.createElement('li'); //crea
@@ -56,22 +53,23 @@ function renderCharacters(characterData, htmlList) {
   nameElement.appendChild(nameText);
   statusElement.appendChild(nameStatus);
   htmlList.appendChild(liElement);
-  addEvent(); //escucha pj para asignar después los eventos
-}
-//función para filtrar
-function handleClick(event) {
-  event.preventDefault();
-  const userSearch = inputSearch.value;
-  fetch(`https://breakingbadapi.com/api/characters?name=${userSearch}`)
-    .then((response) => response.json())
-    .then((data) => {
-      searchList = data;
-      renderAllCharacters(searchList, listCharacter);
-    });
+  // addEvent(); //escucha pj para asignar después los eventos
 }
 //EVENTOS
-btn.addEventListener('click', handleClick);
+btn.addEventListener('click', handleSearch);
 
+function handleSearch(event) {
+  event.preventDefault();
+
+  const userSearch = inputSearch.value;
+
+  filterCharacters = allCharacter.filter((character) =>
+    character.name.toLowerCase().includes(userSearch)
+  );
+  listCharacter.innerHTML = '';
+  renderAllCharacters(filterCharacters, listCharacter);
+  addEvent();
+}
 //FUNCIÓN AÑADIR FAV y pintarlos
 
 function handleFavourites(event) {

@@ -1,15 +1,15 @@
-.header{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-image: url("../images/cabecera2.jpg");
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    &__div{
+.header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url('../images/breaking-bad.jpg');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  &__div {
     background-color: white;
-    height: 80px;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
     transform: translateY(30px);
@@ -17,28 +17,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &--input{
-        border: solid 2px $orange-bg;
-        width: 60vw;
-        height: 25px;
-        padding-left: 10px;
-        margin: 3rem;
+    width: 90%;
+    &--input {
+      border: solid 2px $orange-bg;
+      width: 70vw;
+      height: 25px;
+      padding-left: 10px;
+      margin: 2rem;
     }
-    &--btn{
-        background-color: $orange-bg;
-        color: $back-color;
-        text-transform: capitalize;
-        border: none;
-        border-radius: 5%;
-        margin-right: 40px;
-        padding: 2px;
-        height: 30px;
-        width: 80px;
-        cursor: pointer;
+    &--btn {
+      background-color: $orange-bg;
+      color: $back-color;
+      text-transform: capitalize;
+      border: none;
+      border-radius: 5%;
+      margin-right: 40px;
+      padding: 2px;
+      height: 30px;
+      width: 80px;
+      cursor: pointer;
     }
-    }
+  }
 }
-
-
-
-

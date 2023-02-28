@@ -1,6 +1,6 @@
-# Evaluación Final módulo 2-Natalia GP
+# Ejercicio Breaking Bad JavaScript Natalia GP
 
-En este repositorio encontrarás el ejercicio de Evaluación final del segundo Módulo de JavaScript del curso de desarrolladora front-end de Adalab
+En este repositorio encontrarás el ejercicio de JavaScript
 
 ## Descripción 🚀
 
@@ -8,7 +8,7 @@ El ejercicio consiste en desarrollar una aplicación web de Breaking Bad, que no
 
 ### Funcionamiento 📋
 
--**Visualización de los personajes**: Permite ver un listado de todos los personajes de Breaking Bad extraídos de la API:https://breakingbadapi.com/. Cada personaje mostrará su imagen, nombre y su estado.
+-**Visualización de los personajes**: Permite ver un listado de todos los personajes de Breaking Bad. Cada personaje mostrará su imagen, nombre y su estado.
 
 - **Buscador de personajes**: Se podrá hacer una búsqueda de personaje por su nombre usando el buscador de la parte superior de la página.
 - **Lista de personajes favoritos**: Se podrá seleccionar personajes favoritos de la serie. Se selecionará de la lista un personaje, después se marcará y se añadirá a la lista de favoritos, estos a su vez se quedarán almacenados en el Local Storeage y en caso de que el usuario quiera volver a entrar en la página, esta lista de favoritos vuelva a mostrarse.
